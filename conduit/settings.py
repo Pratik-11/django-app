@@ -46,7 +46,11 @@ INSTALLED_APPS = [
     'conduit.apps.authentication',
     'conduit.apps.core',
     'conduit.apps.profiles',
+    'home'
+
 ]
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -129,10 +133,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-CORS_ORIGIN_WHITELIST = (
-    '0.0.0.0:4000',
-    'localhost:4000',
-)
+CORS_ORIGIN_WHITELIST = [
+    "http://localhost:4000",
+    "http://0.0.0.0:4000",
+]
 
 # Tell Django about the custom `User` model we created. The string
 # `authentication.User` tells Django we are referring to the `User` model in
